@@ -8,17 +8,18 @@ $(document).ready(function () {
 
     alphacaparray.push(itemarray[1], itemarray[0], itemarray[2]);
 
-    itemArray.forEach(function (element) {
+    itemarray.forEach(function (element) {
       $("ul#grocery-list").append('<li>' + element + '</li>');
     });
 
-    $("#grocery-input-section").hide();
-    $("#grocery-output-section").show();
 
     if (!item1 || !item2 || !item3) {
       alert("Please fill out all fields. I wouldn't want you to go hungry!")
+    } else {
+      $("div#grocery-input-section").hide();
+      $("div#grocery-output-section").show();
     }
     event.preventDefault();
-    
+
   });
 });
